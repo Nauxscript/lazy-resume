@@ -1,0 +1,23 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+.resume-content {
+  width: 1024px;
+  min-height: 1440px;
+}
+
+.linkto {
+  transition-property: color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.linkto:hover {
+  color: #DBEAFE;
+}
+
+.linkto:hover > svg {
+  color: #DBEAFE;
+}

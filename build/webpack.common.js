@@ -8,7 +8,7 @@ module.exports = {
   output: {
     filename: 'bundel.[hash].js',
     clean: true,
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, '../dist')
   },
   plugins: [
     new HtmlWebpackPlugin({

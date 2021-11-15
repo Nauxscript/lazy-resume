@@ -60,18 +60,27 @@ p strong {
   position: relative;
   overflow: hidden;
   z-index: 2;
+  background:linear-gradient(to left, #BFDBFE, #BFDBFE) no-repeat 8px 8px;
 }
 
-p strong::before {
-  content: " ";
+.dark p strong {
+  background:linear-gradient(to left, #6B7280, #6B7280) no-repeat 8px 8px;
+}
+
+/* p strong::after {
+  content: "";
   width: calc(100% - 6px);
-  height: 80%;
+  height: 0.75rem;
   background: #BFDBFE;
   position: absolute;
   left: 6px;
   top: 6px;
   z-index: -1;
 }
+
+.dark p strong::after {
+  background: #9CA3AF;
+} */
 
 p em {
   font-family: Monaco,Menlo,'Helvetica Neue',Helvetica,'PingFang SC','Microsoft YaHei','微软雅黑',Arial,sans-serif;
@@ -99,9 +108,9 @@ p>:first-child {
 }
 
 .dark .dark-icon {
-  display: none;
+  visibility: hidden;
 }
 
 .dark .light-icon {
-  display: flex;
+  visibility: visible;
 }

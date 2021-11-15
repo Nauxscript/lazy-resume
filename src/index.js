@@ -1,10 +1,12 @@
+// public style
 import "./style/index.css"
+// darkmode param
+let mode = 'light'
 
+// HTML files hot reload setting, only open in development environment
 if (process.env.NODE_ENV !== 'production') {
   require('../index.html')
 }
-
-let mode = 'light'
 
 // darkmode
 window.onload = function() {
@@ -26,5 +28,4 @@ darkModeBtn.addEventListener('click', function(e){
     document.documentElement.classList.add('dark')
     localStorage.setItem('mode', 'dark')
   }
-  
 })

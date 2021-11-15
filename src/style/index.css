@@ -114,3 +114,21 @@ p>:first-child {
 .dark .light-icon {
   visibility: visible;
 }
+
+.skill-list-item-title {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.skill-list-item-title::before {
+  content: " ";
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: #000;
+  position: absolute ;
+  top: 0.5rem;
+  left: 0.25rem;
+  background-color: #60A5FA;
+  /* line-height: 10 0%; */
+}

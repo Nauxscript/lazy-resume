@@ -26,3 +26,14 @@ darkModeBtn.addEventListener('click', function(e){
     localStorage.theme = 'dark'
   }
 })
+
+const switchBtn = document.getElementById('switch')
+switchBtn.addEventListener('click', function(e){
+  if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.querySelector('html').classList.remove('dark')
+    localStorage.theme = 'light'
+  } else {
+    document.documentElement.classList.add('dark')
+    localStorage.theme = 'dark'
+  }
+})

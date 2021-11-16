@@ -1105,6 +1105,10 @@ p>:first-child {
     margin-bottom: 0px;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:h-full {
     height: 100%;
   }
@@ -1127,6 +1131,10 @@ p>:first-child {
 
   .sm\:items-end {
     align-items: flex-end;
+  }
+
+  .sm\:items-center {
+    align-items: center;
   }
 
   .sm\:justify-between {

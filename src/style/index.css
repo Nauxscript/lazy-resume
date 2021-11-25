@@ -131,8 +131,14 @@ p>:first-child {
     margin: 0;
     padding: 0;
     size: A4 portrait;
+    -webkit-print-color-adjust:exact;
+    color-adjust: exact;
   }
   body {
     zoom: .8;
+  }
+  .resume-header, .resume-body, .module-header span {
+    -webkit-print-color-adjust:exact;
+    color-adjust: exact;
   }
 }

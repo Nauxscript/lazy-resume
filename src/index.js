@@ -42,6 +42,8 @@ printBtn.addEventListener("click", printResume)
 const pdfBtn = document.getElementById('pdfFile')
 pdfBtn.addEventListener("click", printResume)
 
+const timestamp = (new Date()).valueOf()
+
 function printResume(){
   //判断iframe是否存在，不存在则创建iframe
   var iframe=document.getElementById("print-iframe");
@@ -55,7 +57,7 @@ function printResume(){
     iframe.style.display = "none"
     // 插入样式
     doc.write('<style media="print">@page {background-color: #000;margin: 0;padding: 0;size: A4 portrait;-webkit-print-color-adjust:exact;color-adjust: exact;}body {zoom: .8;} .resume-header, .resume-body, .module-header span {-webkit-print-color-adjust:exact;color-adjust: exact;}</style>');
-    doc.write('<link rel="stylesheet" href="index.css">');
+    doc.write('<link rel="stylesheet" href="index.css?t=' + timestamp + '">');
     doc.write('<body>' + el.innerHTML + '</body>');
     doc.close();
     iframe.contentWindow.focus();

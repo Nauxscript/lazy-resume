@@ -101,6 +101,11 @@ p>:first-child {
   left: calc(50% + 512px + 1.2rem);
 }
 
+.me-button {
+  /* @apply w-12 h-12 my-2 box-content  border-2 border-blue-400 rounded-full bg-white text-blue-400 hover:text-white dark:bg-gray-700 dark:hover:bg-blue-400 dark:hover:text-gray-700 hover:bg-blue-400 transition-colors cursor-pointer; */
+  @apply w-12 h-12 my-2 box-content flex justify-center items-center relative border-2 border-blue-400 rounded-full bg-white text-blue-400 hover:text-white dark:bg-gray-700 dark:hover:bg-blue-400 dark:hover:text-gray-700 hover:bg-blue-400 transition-colors cursor-pointer
+}
+
 .dark .dark-icon {
   @apply invisible;
 }
@@ -116,4 +121,18 @@ p>:first-child {
 .skill-list-item-title::before {
   content: " ";
   @apply w-1 h-1 rounded-full bg-blue-400 top-2.5 left-1 absolute;
+}
+
+
+/* print style */
+@media print {
+  @page {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    size: A4 portrait;
+  }
+  body {
+    zoom: .8;
+  }
 }

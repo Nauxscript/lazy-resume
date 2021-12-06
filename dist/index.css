@@ -576,6 +576,10 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -634,6 +638,12 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-max {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .flex-1 {
@@ -851,6 +861,10 @@ video {
   padding-bottom: 2rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
 .pl-2 {
   padding-left: 0.5rem;
 }
@@ -881,6 +895,10 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.font-normal {
+  font-weight: 400;
 }
 
 .font-bold {
@@ -1097,9 +1115,28 @@ p em {
   background-color: #f6f6f6;
 }
 
-p>:first-child {
+p> strong:first-child {
   margin-left: 0;
   padding-left: 0;
+}
+
+.company-project-desc> p:first-child > strong:first-child {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.company-project-name:hover img {
+  top: 0px;
+  left: 100%;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgba(191, 219, 254, var(--tw-border-opacity));
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 .dark em {
@@ -1221,6 +1258,10 @@ p>:first-child {
 }
 
 @media (min-width: 640px) {
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
   .sm\:mb-0 {
     margin-bottom: 0px;
   }
@@ -1288,6 +1329,10 @@ p>:first-child {
 }
 
 @media print {
+  .print\:mt-0 {
+    margin-top: 0px;
+  }
+
   .print\:mb-0 {
     margin-bottom: 0px;
   }

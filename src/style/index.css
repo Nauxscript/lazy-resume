@@ -87,9 +87,17 @@ p em {
   background-color: #f6f6f6;
 }
 
-p>:first-child {
+p> strong:first-child {
   margin-left: 0;
   padding-left: 0;
+}
+
+.company-project-desc> p:first-child > strong:first-child {
+  @apply text-base;
+}
+
+.company-project-name:hover img {
+  @apply block w-16 h-16 top-0 left-full transition-all border border-blue-200;
 }
 
 .dark em {

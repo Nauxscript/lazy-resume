@@ -6,9 +6,20 @@ module.exports = {
     index: './src/index.js'
   },
   output: {
-    filename: 'bundel.[hash].js',
+    filename: 'bundel.[fullhash].js',
     clean: true,
-    path: path.resolve(__dirname, '../dist')
+    path: path.resolve(__dirname, '../dist'),
+  },
+  module: {
+    rules: [
+      {
+        test: /\.(png|jpg|gif)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'asset/img/[name][ext]'
+        }
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({

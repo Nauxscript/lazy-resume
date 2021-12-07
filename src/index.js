@@ -2,6 +2,8 @@
 import "./style/index.css"
 // darkmode param
 
+import "./asset/img/mini_program.jpg"
+
 // HTML files hot reload setting, only open in development environment
 if (process.env.NODE_ENV !== 'production') {
   require('./index.html')
@@ -15,8 +17,6 @@ window.onload = function() {
   } else {
     document.querySelector('html').classList.remove('dark')
   }
-  let csses = document.getElementsByTagName("style")
-  console.log(csses)
 }
 
 function darkAndLight(e) {
@@ -56,8 +56,8 @@ function printResume(){
     doc = iframe.contentWindow.document;
     iframe.style.display = "none"
     // 插入样式
-    doc.write('<style media="print">@page {background-color: #000;margin: 0;padding: 0;size: A4 portrait;-webkit-print-color-adjust:exact;color-adjust: exact;}body {zoom: .8;} .resume-header, .resume-body, .module-header span {-webkit-print-color-adjust:exact;color-adjust: exact;}</style>');
-    doc.write('<link rel="stylesheet" href="index.css?t=' + timestamp + '">');
+    doc.write('<style media="print">body {zoom: .8;}</style>');
+    doc.write('<link rel="stylesheet" href="./index.css?t=' + timestamp + '">');
     doc.write('<body>' + el.innerHTML + '</body>');
     doc.close();
     iframe.contentWindow.focus();

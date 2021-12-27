@@ -6,7 +6,7 @@ import "./asset/img/mini_program.jpg"
 
 // HTML files hot reload setting, only open in development environment
 if (process.env.NODE_ENV !== 'production') {
-  require('./index.html')
+  // require('raw-loader!./index.ejs')
 }
 
 // darkmode
@@ -30,17 +30,17 @@ function darkAndLight(e) {
 }
 
 const darkModeBtn = document.getElementById('toggleDarkMode')
-darkModeBtn.addEventListener('click', darkAndLight)
+darkModeBtn && darkModeBtn.addEventListener('click', darkAndLight)
 
 const switchBtn = document.getElementById('switch')
-switchBtn.addEventListener('click', darkAndLight)
+switchBtn && switchBtn.addEventListener('click', darkAndLight)
 
 // print
 const printBtn = document.getElementById('print')
-printBtn.addEventListener("click", printResume)
+printBtn && printBtn.addEventListener("click", printResume)
 
 const pdfBtn = document.getElementById('pdfFile')
-pdfBtn.addEventListener("click", printResume)
+pdfBtn && pdfBtn.addEventListener("click", printResume)
 
 const timestamp = (new Date()).valueOf()
 

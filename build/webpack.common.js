@@ -1,5 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const resumeData = require('../resume.config')
 
 module.exports = {
   entry: {
@@ -18,12 +20,45 @@ module.exports = {
         generator: {
           filename: 'asset/img/[name][ext]'
         }
+      }, {
+        test: /\.ejs$/,
+        use: [
+          {
+            loader: 'ejs-loader',
+            options: {
+              variable: 'data',
+              esModule: false,
+            },
+          }
+        ]
       }
+      // {
+      //   test: /\.ejs$/,
+      //   use: [
+      //     'html-loader',
+      //     {
+      //       loader: 'ejs-compiled-loader',
+      //       options: {
+      //         htmlmin: true,
+      //         htmlminOptions: {
+      //           removeComments: true
+      //         }
+      //       },
+      //     }
+      //   ]
+      // }
     ]
   },
   plugins: [
+    // new HtmlWebpackPlugin({
+    //   template: './src/index.ejs'
+    // }),
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      filename: 'index.html',
+      template: '!!ejs-compiled-loader!src/index.ejs'
     }),
+    new webpack.ProvidePlugin({
+      _: "lodash"
+    })
   ]
 }

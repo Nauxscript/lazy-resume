@@ -16,10 +16,11 @@ const devConfig = {
       {
         test: /\.css$/i,
         use: ["style-loader", "css-loader", "postcss-loader"],
-      }, {
-        test: /\.html$/,
-        loader: "raw-loader" // loaders: ['raw-loader'] is also perfectly acceptable.
       }
+      // , {
+      //   test: /\.ejs$/,
+      //   loader: "raw-loader" // loaders: ['raw-loader'] is also perfectly acceptable.
+      // }
     ],
   }
 }

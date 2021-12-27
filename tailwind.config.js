@@ -1,14 +1,10 @@
 module.exports = {
   mode: 'jit',
-  purge: {
-    content: [
-      './index.html',
-      './src/**/*.html',
-    ],
-    options: {
-      safelist: ['dark'],
-    }
-  },
+  content: [
+    './index.html',
+    './src/**/*.html',
+  ],
+  safelist: ['dark'],
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {

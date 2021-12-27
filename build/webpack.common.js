@@ -55,7 +55,7 @@ module.exports = {
     // }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: '!!ejs-compiled-loader!src/index.ejs'
+      template: '!!ejs-compiled-loader!./src/index.ejs'
     }),
     new webpack.ProvidePlugin({
       _: "lodash"

@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack')
-const resumeData = require('../resume.config')
 
 module.exports = {
   entry: {
@@ -22,31 +21,27 @@ module.exports = {
         }
       }, {
         test: /\.ejs$/,
-        use: [
-          {
-            loader: 'ejs-loader',
-            options: {
-              variable: 'data',
-              esModule: false,
-            },
+        use: [{
+          loader: 'ejs-compiled-loader',
+          options: {
+            htmlmin: true,
+            htmlminOptions: {
+              removeComments: true
+            }
           }
-        ]
+        }]
+      }, {
+        test: /\.md/,
+        use: [{
+          loader: 'ejs-compiled-loader',
+          options: {
+            htmlmin: true,
+            htmlminOptions: {
+              removeComments: true
+            }
+          }
+        }, 'markdown-loader']
       }
-      // {
-      //   test: /\.ejs$/,
-      //   use: [
-      //     'html-loader',
-      //     {
-      //       loader: 'ejs-compiled-loader',
-      //       options: {
-      //         htmlmin: true,
-      //         htmlminOptions: {
-      //           removeComments: true
-      //         }
-      //       },
-      //     }
-      //   ]
-      // }
     ]
   },
   plugins: [
@@ -54,11 +49,10 @@ module.exports = {
     //   template: './src/index.ejs'
     // }),
     new HtmlWebpackPlugin({
+      title: 'Nauxscript',
       filename: 'index.html',
-      template: '!!ejs-compiled-loader!./src/index.ejs'
-    }),
-    new webpack.ProvidePlugin({
-      _: "lodash"
+      // template: '!!ejs-compiled-loader!./src/index.ejs'
+      template: './src/index.ejs'
     })
   ]
 }

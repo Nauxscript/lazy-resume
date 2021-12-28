@@ -47,6 +47,10 @@ p> strong:first-child {
   padding-left: 0;
 }
 
+.company-project-desc p {
+  @apply leading-7 text-sm dark:text-gray-100;
+}
+
 .company-project-desc> p:first-child > strong:first-child {
   @apply text-base;
 }

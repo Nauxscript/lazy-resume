@@ -6,7 +6,8 @@ import "./asset/img/mini_program.jpg"
 
 // HTML files hot reload setting, only open in development environment
 if (process.env.NODE_ENV !== 'production') {
-  // require('raw-loader!./index.ejs')
+  
+  // require('./index.ejs')
 }
 
 // darkmode

@@ -1,8 +1,8 @@
 module.exports = {
   mode: 'jit',
   content: [
-    './index.html',
-    './src/**/*.html',
+    './src/resume.config.js',
+    './src/**/*.ejs',
   ],
   safelist: ['dark'],
   darkMode: 'class', // or 'media' or 'class'

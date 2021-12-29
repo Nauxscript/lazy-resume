@@ -5,7 +5,7 @@
 这是一份 Naux 的简历，欢迎指教。
 简历基于 VanillaJS（哈哈哈） +  Tailwind CSS 搭建，已完成了基本样式编写、移动端响应式、深色模式...等等，简简单单舒舒服服。
 
-##### [示例](http://nauxscript.gitee.io/noahs-ark)
+##### [示例](https://nauxscript.gitee.io/resume/)
 
 #### 功能 & 支持
 

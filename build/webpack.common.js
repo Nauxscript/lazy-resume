@@ -9,7 +9,7 @@ module.exports = {
   output: {
     filename: 'bundle.[fullhash].js',
     clean: true,
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../docs'),
   },
   module: {
     rules: [

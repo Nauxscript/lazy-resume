@@ -26,3 +26,11 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run build
+    -
+      name: Deploy to GitHub Pages
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: release
+        build_dir: docs
+      env:
+        GITHUB_TOKEN: ${{ secrets.PUBLIC_ACCESS_TOKEN }}

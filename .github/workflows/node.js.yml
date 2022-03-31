@@ -29,9 +29,10 @@ jobs:
         with:
           ref: release
       - name: Deploy to GitHub Pages
+        if: success()
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: release
-          build_dir: ./docs
+          build_dir: docs
         env:
           GITHUB_TOKEN: ${{ secrets.PUBLIC_ACCESS_TOKEN }}

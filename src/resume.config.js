@@ -1,6 +1,6 @@
 module.exports = {
   baseInfo: {
-    name: '汤遒之',
+    name: '汤卓轩',
     name_en: 'Zhuoxuan Tang',
     post: '前端开发工程师',
     base: '广州',

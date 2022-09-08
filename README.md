@@ -29,5 +29,3 @@
 
 1.  修改项目前请先了解一下 **Tailwind CSS** 与 **EJS** 的基本语法
 2.  项目中的图标为 Tailwind CSS 官方提供的 SVG Icon（除了 gitee 的 icon）；用 SVG 是因为省事（懒）。
-
-

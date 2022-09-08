@@ -1,13 +1,11 @@
 # resume
 
+## 该项目已被迁移至 [resume.me](https://github.com/Nauxscript/resume.me)，并基于 Astro + Unocss 重构，本项目不再更新，仅作纪念，光阴似箭啊。
+
 #### 介绍
 
 这是一份 Naux 的简历，欢迎指教。
 简历基于 VanillaJS（哈哈哈） + Tailwind CSS 搭建，已完成了基本样式编写、移动端响应式、深色模式...等等，简简单单舒舒服服。
-
-#### [示例](https://nauxscript.github.io/lazy-resume/)
-
-#### [示例 - 国内用户](https://nauxscript.gitee.io/resume/)
 
 #### 功能 & 支持
 
@@ -32,23 +30,4 @@
 1.  修改项目前请先了解一下 **Tailwind CSS** 与 **EJS** 的基本语法
 2.  项目中的图标为 Tailwind CSS 官方提供的 SVG Icon（除了 gitee 的 icon）；用 SVG 是因为省事（懒）。
 
-#### 未完待续
 
-1. 国际化 i18n
-2. ~~开发环境 pdf 生成~~
-3. 优化开发环境模版文件热更新
-4. 优化 Markdown 语法支持及撰写方式（当前为霸王硬上弓的做法，实在是下下策）
-5. 优化配置文件内容支持及页面元素显示，使简历适合更多不同的职业人群（现在只是适合~~前端开发~~程序员）
-
-#### 参与贡献
-
-1.  ~~Fork 本仓库~~
-2.  ~~新建 Feat_xxx 分支~~
-3.  ~~提交代码~~
-4.  ~~新建 Pull Request~~
-5.  有问题欢迎联系互相交流，目前这个项目还在开发中，还不适合大家来贡献（~~主要是自己代码水平差~~）
-
-#### 任何问题请联系
-
-- wechat：nauxscript
-- gitee： nauxscript
